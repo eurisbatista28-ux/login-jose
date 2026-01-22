@@ -1,7 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #3b0a0a;
+}
+
+
+#menu-toggle {
+  display: none;
+}
+
+
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #0a4c8a;
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+
+#menu-toggle:checked ~ .menu {
+  right: 0;
+}
+
+
+.menu a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  background: #0d63b5;
+}
+
+
+.login-box {
+  width: 300px;
+  background: #0a4c8a;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 120px auto;
+  color: white;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background: #2196f3;
+  border: none;
+  color: white;
+}
+
+
+
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #f3fbff, #6daabe, #2c5364);
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,15 +92,15 @@ body {
 
 
 .container {
-  background: #4e4e4e;
+  background: #468d8d;
   padding: 30px;
-  max-width: 400px;
+  max-width: 250px;
   width: 90%;
   text-align: center;
   border-radius: 18px;
 
   box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 15px 35px rgba(255, 255, 255, 0.6),
     0 0 25px rgba(74, 144, 226, 0.7);
 }
 
@@ -30,7 +110,6 @@ h1 {
   color: #ffffff;
   opacity: 0;
   animation: fadeIn 2s ease forwards;
-  text-decoration: underline;
 }
 
 @keyframes fadeIn {
@@ -70,15 +149,7 @@ input {
   box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.eye {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-  color: #bbb;
-  cursor: pointer;
-}
+
 
 .eye:hover {
   color: #4a90e2;
@@ -103,12 +174,11 @@ button:hover {
 }
 
 
-@media (max-width: 480px) {
-  .container {
-    padding: 20px;
+@media (max-width: 480px) 
+   {
+   
   }
 
   h1 {
     font-size: 20px;
   }
-}
